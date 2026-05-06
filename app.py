@@ -15,7 +15,7 @@ with col1:
     'Mumbai Indians',
     'Royal Challengers Bangalore',
     'Kolkata Knight Riders',
-    'Kings XI Punjab',
+    'Punjab Kings',
     'Chennai Super Kings',
     'Rajasthan Royals',
     'Delhi Capitals',
@@ -69,7 +69,7 @@ col3, col4, col5 ,col6= st.columns(4)
 with col3:
     score = st.number_input('Current Score', min_value=0)
 with col4:
-    balls = st.number_input('Current Ball of this Over', min_value=0, max_value=120)
+    balls = st.number_input('Current Ball of this Over', min_value=0, max_value=6)
 with col5:
     overs=st.number_input('Current Over',min_value=1,max_value=19)
 with col6:
@@ -78,10 +78,13 @@ with col6:
 
 if st.button('Predict Win Probability'):
     
-   
+   if batting_team == bowling_team:
+    st.error("Batting and Bowling teams can't be the same!")
+else:
+    
     runs_left = target - score
     wickets_remaining = 10 - wickets_fallen
-    balls_bowled = overs*6+balls-6
+    balls_bowled = (overs-1)*6+balls
     balls_left=120-balls_bowled
     
     
