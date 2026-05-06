@@ -80,7 +80,7 @@ if st.button('Predict Win Probability'):
     
    if batting_team == bowling_team:
     st.error("Batting and Bowling teams can't be the same!")
-else:
+   else:
     
     runs_left = target - score
     wickets_remaining = 10 - wickets_fallen
