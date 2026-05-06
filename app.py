@@ -84,7 +84,7 @@ else:
     
     runs_left = target - score
     wickets_remaining = 10 - wickets_fallen
-    balls_bowled = (overs-1)*6+balls
+    balls_bowled = (overs)*6+balls
     balls_left=120-balls_bowled
     
     
