@@ -71,7 +71,7 @@ with col3:
 with col4:
     balls = st.number_input('Current Ball of this Over', min_value=0, max_value=6)
 with col5:
-    overs=st.number_input('Current Over',min_value=1,max_value=19)
+    overs=st.number_input('Current Over',min_value=0,max_value=19)
 with col6:
     wickets_fallen = st.number_input('Wickets Fallen', min_value=0, max_value=10)
 
